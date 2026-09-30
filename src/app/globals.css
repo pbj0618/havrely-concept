@@ -1,26 +1,55 @@
 @import "tailwindcss";
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
+/*
+ * Taken from the carton: kraft board, oat-cream paper, the deep green of the
+ * wordmark and the oat drawing. Green is the only colour with a job - links,
+ * buttons, the brand itself - so it stays rare.
+ */
+@theme {
+  --color-oat: #f5efe3;
+  --color-kraft: #e4d6bd;
+  --color-forest: #23412f;
+  --color-forest-deep: #182e21;
+  --color-ink: #1d241f;
+  --color-muted: #545d52;
+  --color-line: #d6cab3;
 }
 
+/* inline: next/font defines these variables on <body>, not :root, so the
+   utilities must reference them directly rather than through a root value. */
 @theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+  --font-serif: var(--font-newsreader), Georgia, serif;
+  --font-sans: var(--font-work-sans), system-ui, sans-serif;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+html {
+  scroll-behavior: smooth;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
   }
 }
 
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  background: var(--color-oat);
+  color: var(--color-ink);
+  font-family: var(--font-work-sans), system-ui, sans-serif;
+  -webkit-font-smoothing: antialiased;
+}
+
+h1,
+h2,
+h3 {
+  text-wrap: balance;
+}
+
+p {
+  text-wrap: pretty;
+}
+
+:focus-visible {
+  outline: 2px solid var(--color-forest);
+  outline-offset: 3px;
 }
