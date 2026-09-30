@@ -75,6 +75,12 @@ export default function ForCafes() {
             <p className="mt-4 max-w-sm text-[17px] leading-relaxed text-muted">
               Oat drink steams a little differently from dairy. Four habits make the difference.
             </p>
+            <Photo
+              src="/images/steaming.jpg"
+              alt="A barista steaming Havrely Barista in a stainless pitcher"
+              className="mt-8 aspect-[16/10] w-full"
+              sizes="(min-width: 768px) 40vw, 100vw"
+            />
           </Reveal>
           <ol className="grid gap-6">
             {STEAMING.map((s, i) => (

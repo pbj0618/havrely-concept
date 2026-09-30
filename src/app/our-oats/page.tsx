@@ -31,9 +31,11 @@ export default function OurOats() {
           </p>
         </Reveal>
         <Photo
-          alt="Oat field at the end of summer"
-          pending="Photo to come: an oat field in late summer, low sun"
+          src="/images/oat-field.jpg"
+          alt="An oat field in late summer, low sun over rolling farmland"
           className="mt-12 aspect-[16/7] w-full"
+          sizes="(min-width: 1152px) 1088px, 100vw"
+          priority
         />
       </section>
 

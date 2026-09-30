@@ -57,6 +57,12 @@ export default function Home() {
             The same four ingredients, balanced for where you pour them.
           </p>
         </Reveal>
+        <Photo
+          src="/images/range.jpg"
+          alt="Three Havrely cartons side by side on an oak table"
+          className="mt-10 aspect-[21/9] w-full"
+          sizes="(min-width: 1152px) 1088px, 100vw"
+        />
         <Reveal delay={0.1} className="mt-8">
           <ProductTabs />
         </Reveal>
