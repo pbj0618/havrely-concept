@@ -18,7 +18,7 @@ export default function Home() {
     <>
       {/* Hero: the product claim, then the two people it is for. */}
       <section className="mx-auto grid max-w-6xl gap-10 px-5 pt-12 md:grid-cols-[1fr_1.15fr] md:items-center md:gap-14 md:px-8 md:pt-20">
-        <Reveal>
+        <div className="rise">
           <p className="text-sm uppercase tracking-[0.18em] text-muted">Oat drink · Copenhagen</p>
           <h1 className="mt-5 font-serif text-5xl leading-[1.02] md:text-7xl">
             Made for <em className="text-forest">the cup.</em>
@@ -41,7 +41,7 @@ export default function Home() {
               See the range
             </a>
           </div>
-        </Reveal>
+        </div>
         <ParallaxPhoto
           src="/images/table.jpg"
           alt="A Havrely carton beside a glass of oat drink on a sunlit wooden table"

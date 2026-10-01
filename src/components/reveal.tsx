@@ -5,8 +5,9 @@ import type { ReactNode } from "react";
 
 /**
  * One entrance for the whole site: a short rise and fade, once. The layout
- * wraps everything in MotionConfig reducedMotion="user", so visitors who ask
- * for less motion get the content without the movement.
+ * wraps everything in MotionConfig reducedMotion="user", and globals.css
+ * shows [data-reveal] outright under prefers-reduced-motion, so visitors who
+ * ask for less motion get the content at once, without the fade.
  */
 export function Reveal({
   children,
@@ -19,6 +20,7 @@ export function Reveal({
 }) {
   return (
     <motion.div
+      data-reveal
       initial={{ opacity: 0, y: 16 }}
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true, margin: "-10% 0px" }}

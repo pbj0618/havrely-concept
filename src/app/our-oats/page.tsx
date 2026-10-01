@@ -20,7 +20,7 @@ export default function OurOats() {
   return (
     <>
       <section className="mx-auto max-w-6xl px-5 pt-12 md:px-8 md:pt-20">
-        <Reveal className="max-w-3xl">
+        <div className="rise max-w-3xl">
           <p className="text-sm uppercase tracking-[0.18em] text-muted">Our oats</p>
           <h1 className="mt-5 font-serif text-5xl leading-[1.04] md:text-6xl">
             Nordic oats, <em className="text-forest">and not much else.</em>
@@ -29,7 +29,7 @@ export default function OurOats() {
             Oats like a cool, long summer. Ours are organic and grown in Denmark and southern Sweden,
             then milled a few hours from where they’re harvested.
           </p>
-        </Reveal>
+        </div>
         <Photo
           src="/images/oat-field.jpg"
           alt="An oat field in late summer, low sun over rolling farmland"

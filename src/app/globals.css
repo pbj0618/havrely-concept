@@ -53,3 +53,40 @@ p {
   outline: 2px solid var(--color-forest);
   outline-offset: 3px;
 }
+
+/*
+ * Above the fold, the entrance is CSS rather than framer-motion: the text is
+ * in the server HTML and visible before any JavaScript runs, so a slow
+ * connection never shows an empty hero. Below the fold, <Reveal> takes over.
+ */
+@keyframes rise {
+  from {
+    opacity: 0;
+    transform: translateY(16px);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+.rise {
+  animation: rise 0.7s cubic-bezier(0.22, 1, 0.36, 1) both;
+}
+
+.rise-late {
+  animation: rise 0.7s 0.1s cubic-bezier(0.22, 1, 0.36, 1) both;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .rise,
+  .rise-late {
+    animation: none;
+  }
+
+  /* framer-motion's inline starting style, overruled: no fade, no wait. */
+  [data-reveal] {
+    opacity: 1 !important;
+    transform: none !important;
+  }
+}

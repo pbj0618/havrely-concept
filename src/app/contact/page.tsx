@@ -1,6 +1,5 @@
 import type { Metadata } from "next";
 import { ContactForm } from "@/components/forms";
-import { Reveal } from "@/components/reveal";
 
 export const metadata: Metadata = {
   title: "Contact",
@@ -29,7 +28,7 @@ const FAQ = [
 export default function Contact() {
   return (
     <section className="mx-auto grid max-w-6xl gap-14 px-5 pt-12 md:grid-cols-[1fr_1.2fr] md:px-8 md:pt-20">
-      <Reveal>
+      <div className="rise">
         <p className="text-sm uppercase tracking-[0.18em] text-muted">Contact</p>
         <h1 className="mt-5 font-serif text-5xl leading-[1.04] md:text-6xl">Write to us.</h1>
         <p className="mt-6 max-w-sm text-lg leading-relaxed text-muted">
@@ -50,11 +49,11 @@ export default function Contact() {
             </details>
           ))}
         </div>
-      </Reveal>
+      </div>
 
-      <Reveal delay={0.1}>
+      <div className="rise-late">
         <ContactForm />
-      </Reveal>
+      </div>
     </section>
   );
 }

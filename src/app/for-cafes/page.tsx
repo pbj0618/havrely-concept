@@ -34,7 +34,7 @@ export default function ForCafes() {
   return (
     <>
       <section className="mx-auto grid max-w-6xl gap-10 px-5 pt-12 md:grid-cols-[1fr_1.1fr] md:items-center md:gap-14 md:px-8 md:pt-20">
-        <Reveal>
+        <div className="rise">
           <p className="text-sm uppercase tracking-[0.18em] text-muted">Havrely Barista</p>
           <h1 className="mt-5 font-serif text-5xl leading-[1.04] md:text-6xl">
             Made with cafés, <em className="text-forest">for cafés.</em>
@@ -43,7 +43,7 @@ export default function ForCafes() {
             The first people to taste every batch are baristas. If it doesn’t steam well, it
             doesn’t leave the mill.
           </p>
-        </Reveal>
+        </div>
         <Photo
           src="/images/latte-pour.jpg"
           alt="Havrely Barista poured from the carton into a latte"
